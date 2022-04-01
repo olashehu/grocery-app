@@ -1,180 +1,72 @@
 /** @format */
 
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+
 import Header from "../../util/SectioonHeader/Header";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { productData } from "../../data/productData";
 import {
   ProductSliderContainer,
   ProductsSlideBox,
   ProductSection,
 } from "./ProductsStyled";
+import { Link } from "react-router-dom";
 
 const Products = () => {
+  SwiperCore.use([Autoplay]);
+
   return (
     <ProductSection id="products">
-      <Header text="Products" subText="Our"/>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}>
-        <ProductSliderContainer className="swiper">
-          <div className="swiper-wrapper">
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-1.png" alt="" />
-                <h3>fresh orange</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-2.png" alt="" />
-                <h3>fresh onion</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-3.png" alt="" />
-                <h3>fresh meat</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
+      <Header text="Products" subText="Our" />
 
-            <SwiperSlide>
-              {" "}
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-4.png" alt="" />
-                <h3>fresh cabbage</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-          </div>
-        </ProductSliderContainer>
-      </Swiper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-        className="swiper">
-        <ProductSliderContainer className="swiper">
-          <div className="swiper-wrapper">
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-5.png" alt="" />
-                <h3>fresh potato</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-6.png" alt="" />
-                <h3>fresh avocado</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-7.png" alt="" />
-                <h3>fresh carrot</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ProductsSlideBox id="swiper-slide">
-                <img src="../../assets/product-8.png" alt="" />
-                <h3>green lemon</h3>
-                <div className="price">$4.99/- - 10.99/-</div>
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStarHalfAlt />
-                </div>
-                <a href="#" className="btn">
-                  add to cart
-                </a>
-              </ProductsSlideBox>
-            </SwiperSlide>
-          </div>
-        </ProductSliderContainer>
-      </Swiper>
+      <ProductSliderContainer>
+        <Swiper
+          spaceBetween={40}
+          modules={[Navigation]}
+          navigation
+          loop
+          centeredSlides={true}
+          grabCursor={true}
+          autoplay={{ delay: 7500, disableOnInteraction: false }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1020: {
+              slidesPerView: 3,
+            },
+          }}
+          className="mySwiper">
+          {productData.map((data, dataIndex) => (
+            <>
+              <SwiperSlide className="swiper-slide" key={dataIndex}>
+                <ProductsSlideBox id="swiper-slide" key={data.id}>
+                  <img src={data.src} alt={data.alt} />
+                  <h3>{data.fruitName}</h3>
+                  <div className="price">{data.price}</div>
+                  <div className="stars">
+                    {data.star1}
+                    {data.star2}
+                    {data.star3}
+                    {data.star4}
+                    {data.halfStar}
+                  </div>
+                  <Link to="#" className="btn">
+                    {" "}
+                    add to cart
+                  </Link>
+                </ProductsSlideBox>
+              </SwiperSlide>
+            </>
+          ))}
+        </Swiper>
+      </ProductSliderContainer>
     </ProductSection>
   );
 };

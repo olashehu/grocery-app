@@ -14,10 +14,7 @@ import {
 const Blog = () => {
   return (
     <section class="blogs" id="blogs">
-        <Header text='Blogs' subText='Our'/>
-      {/* <h1 class="heading">
-        our <span>blogs</span>
-      </h1> */}
+      <Header text="Blogs" subText="Our" />
 
       <BlogBoxContainer>
         <BlogBox>
@@ -28,7 +25,6 @@ const Blog = () => {
                 <i className="fas fa-user"></i> by user{" "}
               </a>
               <a href="#">
-                {" "}
                 <i className="fas fa-calendar"></i> 1st may, 2021
               </a>
             </BlogIconContainer>
@@ -70,11 +66,9 @@ const Blog = () => {
           <BlogContent>
             <BlogIconContainer>
               <a href="#">
-               
                 <i className="fas fa-user"></i> by user
               </a>
               <a href="#">
-                
                 <i className="fas fa-calendar"></i> 1st may, 2021
               </a>
             </BlogIconContainer>
@@ -90,6 +84,6 @@ const Blog = () => {
       </BlogBoxContainer>
     </section>
   );
-}
+};
 
-export default Blog
+export default Blog;

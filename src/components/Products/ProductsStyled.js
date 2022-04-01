@@ -1,18 +1,23 @@
-/** @format */
+
 
 import styled from "styled-components";
 
-export const ProductSection = styled.section`
-  .swiper {
-    margin-top: 1.4rem;
-  }
-`;
+export const ProductSection = styled.section``;
 
 export const ProductSliderContainer = styled.div`
   padding: 1rem;
-  &:first-child {
-    margin-bottom: 2rem;
+
+  .mySwiper{
+    width: 100%;
   }
+
+  @media screen and (max-width: 450px){
+    .mySwiper{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+ 
 `;
 
 export const ProductsSlideBox = styled.div`

@@ -19,6 +19,7 @@ import Products from "../Products/Products.jsx";
 import Categories from "../Categories/Categories.jsx";
 import Review from "../Review/Review.jsx";
 import Blog from "../Blog/Blog.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 const Navbar = () => {
   const [isFormInput, setIsFormInput] = useState(false);
@@ -44,6 +45,13 @@ const Navbar = () => {
 
   const handleToggle = () => {
     setIsNavbarOpen(!isNavbarOpen)
+  }
+
+  window.onscroll = () => {
+     setIsFormInput(false);
+     setIsCartComponent(false);
+     setIsLogin(false);
+     setIsNavbarOpen(false)
   }
 
   return (
@@ -77,6 +85,7 @@ const Navbar = () => {
       <Categories />
       <Review />
       <Blog />
+      <Footer />
     </>
   );
 };
